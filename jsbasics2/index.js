@@ -1,0 +1,1 @@
+console.log("chliye suru krte hai bina kisi deri k");
