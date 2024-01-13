@@ -108,10 +108,82 @@
 // }
 
 //Arrays in JS as Object Type -->>
-let course = [
+let courses = [
     {no:1, fname:'vikas'},
     {no:2,lastName:'singh'}
 ];
-console.log(course);
-console.log(course.indexOf({no:1, fname:'vikas'})); //return -1;
- 
+// console.log(courses);
+// console.log(courses.indexOf({no:1, fname:'vikas'})); //return -1;
+
+
+//Searching In Object type Arrays using Callback Function:
+
+// let course1 = courses.find( course =>
+//      course.lastName == 'singh'
+// )
+
+// console.log(course1)
+// let course2 = courses.find(function(course2){
+//     return course2.lastName === 'singh';
+// })
+
+// console.log(course2)
+
+
+//Removing From array"
+let array = [1,2,3,4,5,6,7]
+//from starting:
+// array.shift(); 
+// console.log(array);
+
+//from ending:
+// array.pop(); 
+// console.log(array);
+
+//from middle:
+// array.splice(3,1); 
+// console.log(array);
+
+//Emptying an array:
+let numbers = [1,2,3,4,5]
+numbers2 = numbers;
+
+//emptying an array:
+// numbers.length = 0; // makes the numbers array empty;
+
+// way ->2
+numbers.splice(0 , numbers.length)
+console.log(numbers)
+console.log(numbers2)
+
+//combining and slicing of arrays:
+//combining --->>
+let array1 = [1,2,3,4,5]
+let array2 = [6,7,8]
+let combined = array1.concat(array2);
+console.log(combined) 
+
+//slicing --->>
+let sliced = combined.slice(2,5)
+console.log(sliced) 
+
+//Using Spread operator to combine to arrays:
+let combined2 = [...array1, ...array2]
+console.log(combined2)
+
+
+//Using Spread operator to copy one array to another arrays:
+let another = [...combined2]
+console.log(another)
+
+//Itterating in array:
+//1. Using for-of loop --->>>
+let num = [10,20,30,40,50]
+for(let values of num){
+    console.log(values)
+}
+
+//2. Using for-each loop --->>>
+num.forEach(function(number){
+    console.log(number)
+})
